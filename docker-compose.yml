@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+	# service name 可以隨意取
+	# container 取名的時候要留意不要跟將要運行的其他 containers 撞名 會爆炸
+	nuxt:
+		 #  Dockerfile 的位置
+    build: ./
+    container_name: nuxt-website
+    restart: always
+    ports:
+      - "3000:3000"
+    command:
+      "npm run start"
